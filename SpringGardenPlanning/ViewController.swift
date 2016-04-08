@@ -21,5 +21,15 @@ class ViewController: UIViewController {
     }
 
 
+    
+    @IBOutlet weak var statusLabel: UILabel!
+   
+    @IBAction func buttonClicked(sender: UIButton) {
+        var status = "Button Clicked!!! Yipee!!!";
+        if let buttonLabel = sender.titleLabel {
+            status = "\(buttonLabel.text) button clicked";
+        }
+        statusLabel.text = status;
+    }
 }
 
